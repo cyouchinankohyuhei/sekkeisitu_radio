@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設計室ラジオ | 山形県鶴岡市の空き家再生・住まいの修繕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --retro-brown: #5d4037;
+            --retro-cream: #fdf6e3;
+            --retro-orange: #d87d4a;
+            --wood-dark: #3e2723;
+        }
+
+        body {
+            font-family: 'Zen Maru+Gothic', sans-serif;
+            background-color: var(--retro-cream);
+            color: var(--wood-dark);
+        }
+
+        .font-heading {
+            font-family: 'Kiwi Maru', serif;
+        }
+
+        .radio-texture {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 4px 4px;
+        }
+
+        .wood-panel {
+            background: #8d6e63;
+            border-bottom: 8px solid #5d4037;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+        }
+
+        .dial {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff, inset 0 0 5px rgba(0,0,0,0.2);
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .dial::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 4px;
+            height: 15px;
+            background: var(--retro-orange);
+            transform: translateX(-50%);
+        }
+
+        .dial:hover {
+            transform: rotate(30deg);
+        }
+
+        .card {
+            background: white;
+            border: 2px solid var(--retro-brown);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px var(--retro-orange);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1581850518616-bcb81881443e?q=80&w=2070&auto=format&fit=crop') center/cover;
+        }
+
+        .sticker {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--retro-orange);
+            color: white;
+            transform: rotate(-2deg);
+            font-weight: bold;
+            box-shadow: 2px 2px 0px var(--wood-dark);
+        }
+
+        .custom-list li::before {
+            content: "📻";
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="wood-panel p-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center text-white">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-brown-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-900"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+                </div>
+                <span class="text-2xl font-heading font-bold tracking-wider">設計室ラジオ</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-bold">
+                <a href="#about" class="hover:text-orange-200">想い</a>
+                <a href="#service" class="hover:text-orange-200">サービス</a>
+                <a href="#strength" class="hover:text-orange-200">強み</a>
+                <a href="#contact" class="px-4 py-1 bg-orange-500 rounded-full hover:bg-orange-600">お問合せ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section h-[70vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
+                暮らしに「ほどよい」<br>
+                パートナーを。
+            </h1>
+            <p class="text-lg md:text-xl mb-8 bg-black/30 backdrop-blur-sm inline-block p-4 rounded">
+                山形県鶴岡市周辺の空き家再生・住まいの修繕。<br class="hidden md:block">
+                設計も、工事も、相談も。ラジオのように寄り添う建築屋さんです。
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg">
+                    まずは雑談から相談する
+                </a>
+                <a href="https://note.com" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg">
+                    作業日誌（note）を見る
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Concept Section -->
+    <section id="about" class="py-20 px-4 radio-texture">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="sticker mb-4">CONCEPT</span>
+            <h2 class="text-3xl font-heading font-bold mb-10">なぜ「ラジオ」なのか</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center text-left">
+                <div class="space-y-6 text-lg leading-relaxed">
+                    <p>
+                        作業をする時、私はいつもラジオを聴いています。
+                        集中していると内容は入ってこないこともありますが、そこにあるだけで何故か落ち着き、心地よい。
+                    </p>
+                    <p>
+                        ラジオは、仕事をする人、暮らしを営む人に「ほどよく寄り添う」最高のパートナーだと思うのです。
+                    </p>
+                    <p>
+                        「設計室ラジオ」も、お客様にとってそんな存在でありたい。
+                        堅苦しい先生ではなく、住まいの困りごとをいつでも気軽に話せる、身近な建築屋を目指しています。
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-amber-100 p-8 rounded-3xl border-4 border-amber-900/20 shadow-xl relative">
+                        <div class="flex gap-4 mb-6 justify-center">
+                            <div class="dial"></div>
+                            <div class="dial"></div>
+                        </div>
+                        <div class="w-full h-8 bg-amber-900/10 rounded flex items-center px-2">
+                            <div class="h-1 w-2/3 bg-orange-500"></div>
+                        </div>
+                        <p class="mt-4 text-center font-bold text-amber-900">Tuning your life...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-heading font-bold">提供サービス</h2>
+                <p class="text-gray-600 mt-2">設計から電球交換まで、大体なんでもやります</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card p-8">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-orange-200 pb-2">空き家リノベーション</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        空き家の再生と貸出、不動産としての活用。ただ直すだけでなく、その土地の良さを活かしたプランニングを行います。
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card p-8 md:scale-105 border-orange-500 shadow-xl">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-orange-500 pb-2">便利屋・修繕サービス</h3>
+                    <p class="text-gray-700 mb-4 text-sm font-bold">「これ、誰に頼めばいいの？」に応えます。</p>
+                    <ul class="text-xs space-y-2 text-gray-600 custom-list">
+                        <li>ガスコンロ・給湯器の交換・修理</li>
+                        <li>エアコン・暖房機の取付・クリーニング</li>
+                        <li>蛇口の交換・水漏れ修理</li>
+                        <li>照明器具・コンセントの増設（電気工事）</li>
+                        <li>庭木の剪定・不用品の処分</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card p-8">
+                    <div class="text-4xl mb-4">📐</div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-orange-200 pb-2">建築相談・設計</h3>
+                    <p class="text-gray-700 mb-4 text-sm">
+                        二級建築士として、設計・企画のアドバイスを行います。DIYで家を直したい方へのレクチャーや、図面作成も承ります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strength Section -->
+    <section id="strength" class="py-20 px-4 bg-amber-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-1 flex-grow bg-amber-900/20"></div>
+                <h2 class="text-3xl font-heading font-bold shrink-0">設計室ラジオの強み</h2>
+                <div class="h-1 flex-grow bg-amber-900/20"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="bg-orange-100 p-6 rounded-lg w-full md:w-1/3">
+                        <h4 class="font-bold text-orange-800 text-lg mb-2">DIY・実戦派</h4>
+                        <p class="text-sm">設計室ですが、設計よりも体を動かすことの方が多いです。自ら施工するからこそ分かる「現場のリアル」を大切にしています。</p>
+                    </div>
+                    <div class="bg-orange-100 p-6 rounded-lg w-full md:w-1/3">
+                        <h4 class="font-bold text-orange-800 text-lg mb-2">圧倒的な対応力</h4>
+                        <p class="text-sm">二級建築士に加え、電気・ガス・水道の専門資格を多数保有。インフラから建物本体までワンストップで面倒を見ることができます。</p>
+                    </div>
+                    <div class="bg-orange-100 p-6 rounded-lg w-full md:w-1/3">
+                        <h4 class="font-bold text-orange-800 text-lg mb-2">地域密着</h4>
+                        <p class="text-sm">鶴岡の風土や古い建物の「クセ」を熟知。レスポンスの速さと機敏さには自信があります。</p>
+                    </div>
+                </div>
+
+                <!-- Credentials -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-dashed border-amber-900/30">
+                    <h4 class="font-bold mb-6 text-center text-amber-900">保有資格一覧（DIYに活かせる武器たち）</h4>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">二級建築士</span>
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">第二種電気工事士</span>
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">甲種ガス主任技術者</span>
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">液化石油ガス設備士</span>
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">給水装置主任技術者</span>
+                        <span class="bg-amber-100 px-4 py-2 rounded text-sm font-bold">危険物取扱主任者乙4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target / CTA Section -->
+    <section class="py-20 px-4 bg-wood-dark text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-heading font-bold mb-8">こんなお悩み、ありませんか？</h2>
+            <div class="grid md:grid-cols-2 gap-4 text-left mb-12">
+                <div class="p-4 border border-white/20 rounded">「空き家を所有しているが、どうしていいか分からない」</div>
+                <div class="p-4 border border-white/20 rounded">「中古住宅を自分好みに直したいが、プロの助言がほしい」</div>
+                <div class="p-4 border border-white/20 rounded">「メーカーに頼むほどではない小さな修理、どこに言えばいい？」</div>
+                <div class="p-4 border border-white/20 rounded">「業者は怖そう。もっと気軽に相談できる人がいれば…」</div>
+            </div>
+            <p class="text-2xl font-heading text-orange-400 mb-4">その悩み、ラジオのように聴かせてください。</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 radio-texture">
+        <div class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-2xl border-4 border-amber-900/10">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-heading font-bold">お問合せ・ご相談</h2>
+                <p class="text-gray-600 mt-4 italic text-lg">「まずは雑談からどうぞ」</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <a href="#" class="flex items-center gap-4 p-4 bg-[#06C755] text-white rounded-xl hover:opacity-90 transition shadow-md">
+                        <span class="text-2xl">💬</span>
+                        <div>
+                            <div class="text-xs">お急ぎ・気軽な相談は</div>
+                            <div class="font-bold text-lg">LINEでお問合せ</div>
+                        </div>
+                    </a>
+                    <a href="tel:000-0000-0000" class="flex items-center gap-4 p-4 bg-gray-800 text-white rounded-xl hover:opacity-90 transition shadow-md">
+                        <span class="text-2xl">📞</span>
+                        <div>
+                            <div class="text-xs">お電話でのご相談</div>
+                            <div class="font-bold text-lg">000-0000-0000</div>
+                        </div>
+                    </a>
+                    <div class="p-4 border-l-4 border-orange-500 bg-orange-50">
+                        <p class="text-sm text-gray-700">
+                            <strong>営業時間：</strong> 9:00 〜 18:00<br>
+                            <strong>対応エリア：</strong> 鶴岡市を中心とした庄内全域
+                        </p>
+                    </div>
+                </div>
+
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold mb-1">お名前</label>
+                        <input type="text" class="w-full border-2 border-gray-200 p-2 rounded focus:border-orange-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1">相談内容</label>
+                        <textarea class="w-full border-2 border-gray-200 p-2 rounded h-32 focus:border-orange-500 outline-none" placeholder="空き家の相談、蛇口の修理など..."></textarea>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition shadow-lg">
+                        メールを送る
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="wood-panel py-12 px-4 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-2xl font-heading font-bold mb-4">設計室ラジオ</div>
+            <p class="text-sm opacity-80 mb-8">山形県鶴岡市 | 空き家再生・住まいの便利屋・二級建築士事務所</p>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="hover:text-orange-300 underline underline-offset-4">Instagram</a>
+                <a href="#" class="hover:text-orange-300 underline underline-offset-4">note</a>
+                <a href="#" class="hover:text-orange-300 underline underline-offset-4">Facebook</a>
+            </div>
+            <p class="text-[10px] opacity-50">&copy; 2024 設計室ラジオ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
