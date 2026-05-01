@@ -563,4 +563,65 @@ img { max-width: 100%; height: auto; }
     .profile-content { flex-direction: column; padding: 1.5rem;}
     .profile-image { width: 80%; max-width: 300px; margin: 0 auto; }
     .contact-form { padding: 1.5rem; }
+}/* ヒーロー エリア表示 */
+.hero-area {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.03em;
+}
+
+/* 資格バッジ */
+.license-section {
+    margin-top: 1.5rem;
+}
+.license-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.mdc-chip--license {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1.5px solid var(--md-sys-color-primary);
+    font-weight: 600;
+    font-size: 0.82rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin: 0.3rem 0.3rem 0 0;
+}
+.mdc-chip--license .material-symbols-rounded {
+    font-size: 1rem;
+    color: var(--md-sys-color-primary);
+}
+
+/* LINEボタン */
+.btn-line {
+    display: inline-flex;
+    align-items: center;
+    background-color: #06C755;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 2px 8px rgba(6,199,85,0.3);
+}
+.btn-line:hover {
+    background-color: #05a847;
+    transform: translateY(-2px);
 }
